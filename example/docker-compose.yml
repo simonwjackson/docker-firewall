@@ -16,8 +16,8 @@ services:
     # Some environment variables to configure the firewall. See the Dockerfile
     # for more about these options.
     environment:
-      ALLOW_IP_ADDRESS: 52.218.200.155
-      ALLOW_PORT: 80
+      ALLOW_ADDRESSES: 1.2.3.4,2.3.4.5
+      ALLOW_PORTS: 80,443
       ALLOW_PROTO: tcp
 
       # This is the port which a tcp socket will be opened on once the firewall

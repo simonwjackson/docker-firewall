@@ -14,8 +14,8 @@ First, start the firwall container.
     docker run \
       --name=firewall \
       --cap-add=NET_ADMIN \
-      -e ALLOW_IP_ADDRESS=52.218.200.155 \
-      -e ALLOW_PORT=80 \
+      -e ALLOW_ADDRESSES=1.2.3.4,2.3.4.5 \
+      -e ALLOW_PORTS=80,443 \
       -e ALLOW_PROTO=tcp \
       0xcaff/simple-outbound-firewall
 

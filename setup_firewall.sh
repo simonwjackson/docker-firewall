@@ -42,9 +42,9 @@ iptables \
 # Accept traffic to the one allowed destination.
 iptables \
   --append OUTPUT \
-  --destination "${ALLOW_IP_ADDRESSES}" \
+  --destination "${ALLOW_ADDRESSES}" \
   --protocol "${ALLOW_PROTO}" \
-  --dport "${ALLOW_PORT}" \
+  --match multiport --dports "${ALLOW_PORTS}" \
   --jump ACCEPT
 
 # Accept local traffic to docker network. It doesn't seem possible to use the
