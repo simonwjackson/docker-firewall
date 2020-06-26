@@ -42,7 +42,7 @@ iptables \
 # Accept traffic to the one allowed destination.
 iptables \
   --append OUTPUT \
-  --destination "${ALLOW_IP_ADDRESS}" \
+  --destination "${ALLOW_IP_ADDRESSES}" \
   --protocol "${ALLOW_PROTO}" \
   --dport "${ALLOW_PORT}" \
   --jump ACCEPT
